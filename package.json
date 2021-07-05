@@ -6,7 +6,7 @@
   "main": "./entry-server.js",
   "scripts": {
     "dev": "npm-run-all dev:* --parallel dev:watch:* ",
-    "dev:clean": "rm -rf node_modules/vite-ssr && mkdir node_modules/vite-ssr",
+    "dev:clean": "rm -rf node_modules/vite-ssr && mkdir \"node_modules/vite-ssr\"",
     "dev:copy": "cp package.json src/index.d.ts node_modules/vite-ssr/",
     "dev:watch:cjs": "cd src && yarn tsc --watch --incremental --outDir ./node_modules/vite-ssr",
     "dev:watch:esm": "yarn dev:watch:cjs --project tsconfig-esm.json",

@@ -30,7 +30,7 @@ export = async ({
   ) as NonNullable<BuildOptions['clientOptions']>
 
   const clientResult = (await build(clientBuildOptions)) as RollupOutput
-
+console.dir(clientResult, { depth: 1 });
   const indexHtml = clientResult.output.find(
     (file) => file.type === 'asset' && file.fileName === 'index.html'
   ) as OutputAsset
